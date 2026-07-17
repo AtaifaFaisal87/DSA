@@ -1,0 +1,22 @@
+// Normal Bubble Sort Complexity:
+// Time Complexity:
+// Best Case    : O(n^2)  -> Even if array is already sorted, all comparisons are made
+// Average Case : O(n^2)
+// Worst Case   : O(n^2)
+//
+// Space Complexity : O(1) -> In-place sorting algorithm
+// Stable           : Yes
+// Adaptive         : No
+// Recursive        : No
+
+
+// Adaptive Bubble Sort Complexity:
+// Time Complexity:
+// Best Case    : O(n)    -> If array is already sorted, algorithm stops after one pass
+// Average Case : O(n^2)
+// Worst Case   : O(n^2)
+//
+// Space Complexity : O(1) -> In-place sorting algorithm
+// Stable           : Yes
+// Adaptive         : Yes  -> Uses isSorted flag to stop early
+// Recursive        : No
