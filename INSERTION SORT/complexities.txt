@@ -1,0 +1,34 @@
+/*
+    Insertion Sort Complexity Analysis:
+
+    Time Complexity:
+    
+    Best Case    : O(n)
+                   - Array is already sorted.
+                   - Only n-1 comparisons are performed.
+                   - No shifting occurs.
+
+    Average Case : O(n^2)
+                   - Elements are randomly arranged.
+                   - Multiple comparisons and shifts are required.
+
+    Worst Case   : O(n^2)
+                   - Array is reverse sorted.
+                   - Every element has to be shifted to the beginning.
+
+    Space Complexity : O(1)
+                       - Only extra variables (key and j) are used.
+                       - No extra array is created.
+                       - In-place sorting algorithm.
+
+    Stability : Yes
+                - Equal elements maintain their original order.
+                - Condition uses a[j] > key, not >=.
+
+    Adaptivity : Yes
+                - Detects already sorted/nearly sorted arrays.
+                - Requires minimum operations when data is already sorted.
+
+    Recursive : No
+                - Uses loops instead of recursive calls.
+*/
