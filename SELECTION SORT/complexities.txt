@@ -1,0 +1,18 @@
+/*
+    Selection Sort Complexity:
+
+    Time Complexity:
+    Best Case    : O(n²)
+    Average Case : O(n²)
+    Worst Case   : O(n²)
+
+    Space Complexity : O(1)
+
+    Stable      : No
+    Adaptive    : No
+    Recursive   : No
+    In-place    : Yes
+
+    Advantage:
+    - Performs the minimum number of swaps (at most n-1).
+*/
