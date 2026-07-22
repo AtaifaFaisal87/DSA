@@ -1,0 +1,108 @@
+
+0 1 2 3 4 5
+2,4,8,9,2,9
+
+low =0
+high=5
+
+partition index=
+ pivot= a[low] (index=0,value=2)
+ i= low+1 (index= 1 , value= 4)
+ j= high (index=5,value=9)
+
+while:
+ i<=high (1<5) && a[i](4) <= 2
+   false
+   so i= (index= 1 , value= 4)
+
+while:
+ j >= low (5 >= 0) && a[j](9) >pivot  
+  (true) j-- 
+  (j=4)
+
+  j >= low (4 >= 0) && a[j](2) >pivot
+  (false) 
+  
+  so j=4,i=1
+
+
+   if:
+   1<4 (true)
+   temp=a[1](4)
+   a[1]=2
+   a[4]=4
+
+0 1 2 3 4 5
+2,2,8,9,4,9
+
+while: 1<4
+    // i= (index= 1 , value= 4)
+    //j= (index=5,value=9)
+while:
+ i<=high (1<5) && a[i](2) <= 2
+   true
+   i++ (i=2)
+
+ i<=high (2<5) && a[i](8) <= 2
+  false
+  so i(index=2,value=8)
+
+while:
+ j >= low (4 >= 0) && a[j](4) >pivot  
+  (true) j-- 
+  (j=3)
+
+  j >= low (3 >= 0) && a[j](9) >pivot
+  (true) j-- 
+  (j=2)
+
+  j >= low (2 >= 0) && a[j](8) >pivot
+  (true) j-- 
+  (j=1)
+
+ j >= low (1 >= 0) && a[j](2) >pivot
+  false
+  so j(index=1,value=2)
+
+   if:
+   fasle
+
+   while:
+   2<1
+
+   temp=a[low] (2)
+   a[0]=a[j] (a[j]=a[1]=2)
+   a[j]=2
+
+0 1 2 3 4 5
+2,2,8,9,4,9
+
+   return 1;
+
+   partition index=1;
+   quicksort(a,0,0)
+   {
+     if: false
+   }
+
+   quicksort(a,1+1,5)
+   {
+    if:true
+    {
+        partition index=
+        {
+
+          partition(a,2,5)
+           low=2
+           high =5
+
+           pivot=a[low] (a[2]=8)
+           i=3
+           j=5
+
+           
+
+
+        }
+    }
+   }
