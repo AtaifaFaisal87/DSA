@@ -1,0 +1,32 @@
+/*
+    Quick Sort Complexity Analysis:
+
+    Time Complexity:
+
+    Best Case    : O(n log n)
+                   - Pivot divides the array into nearly equal halves.
+
+    Average Case : O(n log n)
+                   - Partitions are reasonably balanced.
+
+    Worst Case   : O(n^2)
+                   - Pivot is always the smallest or largest element.
+                   - Example: Already sorted array (with first/last element as pivot).
+
+    Space Complexity :
+        Best/Average : O(log n)
+                       - Due to recursive call stack.
+        Worst        : O(n)
+                       - Highly unbalanced recursion.
+
+    Stable      : No
+                  - Equal elements may change their relative order.
+
+    Adaptive    : No
+                  - Does not take advantage of an already sorted array.
+
+    Recursive   : Yes
+
+    In-place    : Yes
+                  - No extra array is used (only recursion stack).
+*/
