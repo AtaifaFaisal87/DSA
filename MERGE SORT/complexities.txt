@@ -1,0 +1,32 @@
+/*
+    MERGE SORT ANALYSIS
+
+    Time Complexity:
+    Best Case:    O(n log n)
+    Average Case: O(n log n)
+    Worst Case:   O(n log n)
+
+    Explanation:
+    - Array is divided into two halves recursively.
+    - Number of divisions = log(n)
+    - Each merge operation takes O(n) time.
+    - Total complexity = O(n) * O(log n)
+                         = O(n log n)
+
+    Space Complexity:
+    O(n)
+
+    Explanation:
+    - Temporary array is created during merging.
+    - Recursion stack requires O(log n) space.
+    - Auxiliary space is dominated by temporary array.
+
+    Algorithm:
+    Divide and Conquer
+
+    Stable:
+    Yes (because equal elements maintain their order)
+
+    In-place:
+    No (requires extra memory for merging)
+*/
