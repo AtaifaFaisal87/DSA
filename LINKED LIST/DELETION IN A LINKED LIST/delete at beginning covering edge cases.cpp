@@ -9,11 +9,11 @@ struct Node
 
 void traversal(Node *ptr)
 {
-       if(ptr ==NULL)
+    if (ptr == NULL)
     {
-        cout<<"EMPTY LIST!"<<endl;
+        cout << "EMPTY LIST!" << endl;
     }
-    
+
     while (ptr != NULL)
     {
         cout << "ELEMENT: " << ptr->data << endl;
@@ -23,6 +23,12 @@ void traversal(Node *ptr)
 
 Node *deletionAtBegnning(Node *head)
 {
+
+    if (head == NULL)
+    {
+        return NULL;
+    }
+
     Node *ptr = head;
     head = head->next;
     delete (ptr);
@@ -47,9 +53,9 @@ int main()
 
     traversal(head);
 
-    head=deletionAtBegnning(head);
+    head = deletionAtBegnning(head);
 
-    cout<<"AFTER DELETION"<<endl;
+    cout << "AFTER DELETION" << endl;
     traversal(head);
 
     return 0;

@@ -1,4 +1,3 @@
-//delete a node in between
 #include <iostream>
 using namespace std;
 
@@ -24,6 +23,22 @@ void traversal(Node *ptr)
 
 Node *deletionAtIndex(Node *head, int index)
 {
+      // Empty list
+    if (head == NULL)
+    {
+        cout << "List is empty." << endl;
+        return NULL;
+    }
+
+    // Delete first node
+    if (index == 0)
+    {
+        Node *ptr = head;
+        head = head->next;
+        delete ptr;
+        return head;
+    }
+    
     Node *ptr = head;
     int i = 0;
 

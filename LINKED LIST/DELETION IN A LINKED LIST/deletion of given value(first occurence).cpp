@@ -1,4 +1,3 @@
-//delete a node in between
 #include <iostream>
 using namespace std;
 
@@ -22,21 +21,40 @@ void traversal(Node *ptr)
     }
 }
 
-Node *deletionAtIndex(Node *head, int index)
+Node *deletionOfGivenValue(Node *head, int val)
 {
-    Node *ptr = head;
-    int i = 0;
+    // empty list
+    if (head == NULL)
+    {
+        return NULL;
+    }
 
-    while (i != index - 1)
+    // deleting first node
+    if (head->data == val)
+    {
+        Node *ptr = head;
+        head = head->next;
+        delete ptr;
+        return head;
+    }
+
+    Node *ptr = head;
+
+    while (ptr->next != NULL && ptr->next->data != val)
     {
         ptr = ptr->next;
-        i++;
+    }
+
+    // value not found
+    if (ptr->next == NULL)
+    {
+        return head;
     }
 
     Node *p = ptr->next;
     ptr->next = p->next;
 
-    delete (p);
+    delete p;
 
     return head;
 }
@@ -72,7 +90,7 @@ int main()
 
     traversal(head);
 
-    head = deletionAtIndex(head, 2);
+    head = deletionOfGivenValue(head, 23);
 
     cout << "AFTER DELETION" << endl;
     traversal(head);

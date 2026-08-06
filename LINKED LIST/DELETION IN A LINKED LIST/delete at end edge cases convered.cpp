@@ -21,11 +21,29 @@ void traversal(Node *ptr)
     }
 }
 
-Node *deletionAtBegnning(Node *head)
+Node *deletionAtEnd(Node *head)
 {
+    if (head == NULL)
+        return NULL;
+
+    if (head->next == NULL)
+    {
+        delete head;
+        return NULL;
+    }
+
     Node *ptr = head;
-    head = head->next;
-    delete (ptr);
+    Node *p = head->next;
+
+    while (p->next != NULL)
+    {
+        ptr = ptr->next;
+        p = p->next;
+    }
+
+    ptr->next = NULL;
+    delete (p);
+
     return head;
 }
 
@@ -35,21 +53,34 @@ int main()
     Node *head = new Node;
     Node *second = new Node;
     Node *third = new Node;
+    Node *fourth = new Node;
+    Node *fifth = new Node;
 
+    // 0
     head->data = 7;
     head->next = second;
 
+    // 1
     second->data = 23;
     second->next = third;
 
-    third->data = 2;
-    third->next = NULL;
+    // 2
+    third->data = 46;
+    third->next = fourth;
+
+    // 3
+    fourth->data = 18;
+    fourth->next = fifth;
+
+    // 4
+    fifth->data = 35;
+    fifth->next = NULL;
 
     traversal(head);
 
-    head=deletionAtBegnning(head);
+    head = deletionAtEnd(head);
 
-    cout<<"AFTER DELETION"<<endl;
+    cout << "AFTER DELETION" << endl;
     traversal(head);
 
     return 0;
